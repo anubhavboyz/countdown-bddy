@@ -579,7 +579,7 @@
 
     <script>
         // Set target date: July 9, 2025 at midnight
-        const targetDate = new Date('2025-07-09T00:00:00').getTime();
+        const targetDate = new Date('2024-07-09T00:00:00').getTime();
         
         // Update countdown every second
         const countdownInterval = setInterval(function() {
@@ -694,10 +694,19 @@
         }
         
         // Birthday button function
-        function celebrateMore() {
-            // Keep the floating elements, but also show alert
-            alert('🎉 Anshika, you are the most precious gift in my life! I love you endlessly! 💕🎂✨');
-        }
+         function celebrateMore() {
+         // Create more confetti
+         for(let i = 0; i < 50; i++) {
+         setTimeout(() => {
+            createConfetti();
+        }, i * 50);
+    }
+    
+    // Open the link in new tab
+    setTimeout(() => {
+        window.open('https://4thbddy.vercel.app/', '_blank');
+    }, 1000);
+}
         
         function playBirthdaySound() {
             // You can add audio here if you want
